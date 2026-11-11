@@ -1,5 +1,31 @@
 [
   {
+    "article_id": 154773,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154773/artclView.do",
+    "board_no": 16228,
+    "title": "[미래차공학교육혁신센터] 2026년 미래형자동차 산업계 전문가 초청 세미나 안내 (제7차)",
+    "author_dept": "미래차공학교육혁신센터",
+    "posted_at": "2026-11-11",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "특강"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "특강",
+          "field": "title",
+          "keyword": "세미나"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-11T05:48:45.557Z",
+    "modified_at": null
+  },
+  {
     "article_id": 154770,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154770/artclView.do",
     "board_no": 16227,
@@ -213,7 +239,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-11T05:29:26.754Z",
     "modified_at": null
   }
