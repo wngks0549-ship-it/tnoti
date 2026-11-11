@@ -10,6 +10,7 @@
 - `data/notices.json` 수집한 공지
 - `data/collect_log.json` 수집 기록. 바뀐 게 있거나 실패했을 때만 남긴다
 - `.github/workflows/collect.yml` 10분마다 수집기를 돌리는 설정
+- `supabase/migrations/` DB 테이블을 만드는 스크립트. Supabase 프로젝트에 이미 적용돼 있다
 
 ## 수집기가 하는 일
 
