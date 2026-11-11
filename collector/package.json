@@ -1,0 +1,17 @@
+{
+  "name": "tnoti-collector",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "TNoti 공지 수집기: 학교 전체공지 목록의 첫 페이지를 읽어 새 공지를 쌓는다",
+  "scripts": {
+    "collect": "node collect.mjs",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  }
+}
