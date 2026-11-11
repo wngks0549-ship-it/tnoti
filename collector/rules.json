@@ -1,0 +1,40 @@
+{
+  "_comment": "분류 규칙 초안이다. 운영자가 잘못 분류된 사례를 보고 고친다(NFR-04). title_keywords는 제목에, author_keywords는 작성 부서에 들어 있으면 그 카테고리를 붙인다.",
+  "categories": [
+    {
+      "name": "창업",
+      "title_keywords": ["창업", "스타트업"],
+      "author_keywords": ["창업"]
+    },
+    {
+      "name": "근로",
+      "title_keywords": ["근로"],
+      "author_keywords": []
+    },
+    {
+      "name": "장학",
+      "title_keywords": ["장학"],
+      "author_keywords": ["장학"]
+    },
+    {
+      "name": "졸업",
+      "title_keywords": ["졸업", "학위수여"],
+      "author_keywords": []
+    },
+    {
+      "name": "취업",
+      "title_keywords": ["취업", "채용", "인턴"],
+      "author_keywords": ["취업"]
+    },
+    {
+      "name": "비교과",
+      "title_keywords": ["비교과"],
+      "author_keywords": ["비교과"]
+    },
+    {
+      "name": "특강",
+      "title_keywords": ["특강", "강연", "세미나"],
+      "author_keywords": []
+    }
+  ]
+}
