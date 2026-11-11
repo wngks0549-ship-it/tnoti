@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "run_at": "2026-11-11T05:29:26.754Z",
+    "run_type": "new",
+    "target_url": "https://tukorea.ac.kr/tukorea/7607/subview.do",
+    "status": "success",
+    "new_count": 10,
+    "modified_count": 0,
+    "deleted_count": 0,
+    "fail_reason": null
+  }
+]

@@ -1,1 +1,220 @@
-[]
+[
+  {
+    "article_id": 154770,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154770/artclView.do",
+    "board_no": 16227,
+    "title": "제14회 한국공학대학교 총장배 CAE 경진대회 대면평가 대상자 발표",
+    "author_dept": "스마트기계융합대학 기계공학과",
+    "posted_at": "2026-11-11",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-11T05:29:26.754Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154767,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154767/artclView.do",
+    "board_no": 16226,
+    "title": "2026 동계방학 생활관생 선발 및 2027-1학기 생활관생 선발 일정 안내",
+    "author_dept": "학생생활복지센터",
+    "posted_at": "2026-11-11",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-11T05:29:26.754Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154761,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154761/artclView.do",
+    "board_no": 16225,
+    "title": "[공모전]『「시흥 RE100, 빛나는 한컷」시화방조제 자전거길 디자인 태양광 사진공모전 안",
+    "author_dept": "학생지원팀",
+    "posted_at": "2026-11-10",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-11T05:29:26.754Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154759,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154759/artclView.do",
+    "board_no": 16224,
+    "title": "2026년 대학생 봉사자 연계 아동돌봄 지원사업(겨울방학) 참여 대학생 모집 안내",
+    "author_dept": "학생지원팀",
+    "posted_at": "2026-11-10",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-11T05:29:26.754Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154742,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154742/artclView.do",
+    "board_no": 16223,
+    "title": "*마감임박*(선착순 10명, 봉사시간+수료증)「마을과 살고 있는 로컬크리에이터」 참여자 모",
+    "author_dept": "창업교육센터",
+    "posted_at": "2026-11-10",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "창업"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "창업",
+          "field": "author_dept",
+          "keyword": "창업"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-11T05:29:26.754Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154739,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154739/artclView.do",
+    "board_no": 16222,
+    "title": "[미래대학] 2026학년도 융합전공 TUgather 우수수기 공모 계획(안)",
+    "author_dept": "미래대학 융합인재양성센터",
+    "posted_at": "2026-11-10",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-11T05:29:26.754Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154736,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154736/artclView.do",
+    "board_no": 16221,
+    "title": "[교양전공설계센터]📢 RC 휴머니티_특강_AI와 (SF)소설 창작",
+    "author_dept": "[교양전공설계센터]",
+    "posted_at": "2026-11-10",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "특강"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "특강",
+          "field": "title",
+          "keyword": "특강"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-11T05:29:26.754Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154734,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154734/artclView.do",
+    "board_no": 16220,
+    "title": "생활관 RC 특강 (11.19 목) '더 멋진 나를 만드는 스피치'",
+    "author_dept": "생활관",
+    "posted_at": "2026-11-10",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "특강"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "특강",
+          "field": "title",
+          "keyword": "특강"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-11T05:29:26.754Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154733,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154733/artclView.do",
+    "board_no": 16219,
+    "title": "생활관 RC프로그램 호신술 (11.17 화)",
+    "author_dept": "생활관",
+    "posted_at": "2026-11-10",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-11T05:29:26.754Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154732,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154732/artclView.do",
+    "board_no": 16218,
+    "title": "TIP 엘리베이터 정기점검 안내 (11.13 금)",
+    "author_dept": "생활관",
+    "posted_at": "2026-11-10",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-11T05:29:26.754Z",
+    "modified_at": null
+  }
+]
