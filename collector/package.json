@@ -12,6 +12,7 @@
     "node": ">=20"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.119.0",
     "cheerio": "^1.0.0"
   }
 }

@@ -45,3 +45,11 @@ jobs:
             git commit -m "data: 공지 수집 결과 반영"
             git push
           fi
+
+      # 데이터는 위에서 이미 저장했으므로, 여기서 실패해도 수집한 공지는 남는다.
+      - name: DB 반영
+        working-directory: collector
+        env:
+          SUPABASE_URL: https://lpbjaraczpohtdwrqbok.supabase.co
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_TNOTI_KEY }}
+        run: node sync.mjs
