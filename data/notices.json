@@ -1,5 +1,25 @@
 [
   {
+    "article_id": 154801,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154801/artclView.do",
+    "board_no": 16229,
+    "title": "[2026 교육성과 통합진단 조사] ★깜짝 이벤트★ \"10의 배수\"를 잡",
+    "author_dept": "IR센터",
+    "posted_at": "2026-11-12",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-12T09:25:24.661Z",
+    "modified_at": null
+  },
+  {
     "article_id": 154773,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154773/artclView.do",
     "board_no": 16228,
@@ -219,7 +239,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-11T05:29:26.754Z",
     "modified_at": null
   },
