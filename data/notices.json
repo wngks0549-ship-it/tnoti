@@ -1,5 +1,97 @@
 [
   {
+    "article_id": 154828,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154828/artclView.do",
+    "board_no": 16233,
+    "title": "📢 여성공학인을 위한 스마트 로봇 자동화 실습 특강 안내",
+    "author_dept": "연구과제팀",
+    "posted_at": "2026-11-13",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "특강"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "특강",
+          "field": "title",
+          "keyword": "특강"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-13T03:14:06.891Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154815,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154815/artclView.do",
+    "board_no": 16232,
+    "title": "[하누리 20기 모집 안내]",
+    "author_dept": "사회봉사지원센터",
+    "posted_at": "2026-11-13",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-13T03:14:06.891Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154808,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154808/artclView.do",
+    "board_no": 16231,
+    "title": "2026년 미래 건설교통신기술인 장학사업 모집 안내",
+    "author_dept": "학생지원팀",
+    "posted_at": "2026-11-13",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "장학"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "장학",
+          "field": "title",
+          "keyword": "장학"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-13T03:14:06.891Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154807,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154807/artclView.do",
+    "board_no": 16230,
+    "title": "『사랑의 헌혈 운동 안내』",
+    "author_dept": "학생지원팀",
+    "posted_at": "2026-11-13",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-13T03:14:06.891Z",
+    "modified_at": null
+  },
+  {
     "article_id": 154801,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154801/artclView.do",
     "board_no": 16229,
@@ -147,7 +239,7 @@
         }
       ]
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-11T05:29:26.754Z",
     "modified_at": null
   },
@@ -167,7 +259,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-11T05:29:26.754Z",
     "modified_at": null
   },
@@ -193,7 +285,7 @@
         }
       ]
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-11T05:29:26.754Z",
     "modified_at": null
   },
@@ -219,7 +311,7 @@
         }
       ]
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-11T05:29:26.754Z",
     "modified_at": null
   },
