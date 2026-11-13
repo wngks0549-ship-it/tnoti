@@ -1,5 +1,47 @@
 [
   {
+    "article_id": 154842,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154842/artclView.do",
+    "board_no": 16234,
+    "title": "[창업교육센터] 2026 창업특강 창업두시 5회차 「스타트업을 위한 AI 마케팅 전략」",
+    "author_dept": "창업교육센터",
+    "posted_at": "2026-11-13",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "창업",
+      "특강"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "창업",
+          "field": "title",
+          "keyword": "창업"
+        },
+        {
+          "category": "창업",
+          "field": "title",
+          "keyword": "스타트업"
+        },
+        {
+          "category": "창업",
+          "field": "author_dept",
+          "keyword": "창업"
+        },
+        {
+          "category": "특강",
+          "field": "title",
+          "keyword": "특강"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-13T11:14:20.384Z",
+    "modified_at": null
+  },
+  {
     "article_id": 154828,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154828/artclView.do",
     "board_no": 16233,
@@ -213,7 +255,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-11T05:29:26.754Z",
     "modified_at": null
   },
