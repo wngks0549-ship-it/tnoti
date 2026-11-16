@@ -1,5 +1,25 @@
 [
   {
+    "article_id": 154851,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154851/artclView.do",
+    "board_no": 16235,
+    "title": "[한국연구재단] 2026년 대학혁신지원사업 학생참여 수기공모전 개최(~12.6.)",
+    "author_dept": "대학혁신지원사업단",
+    "posted_at": "2026-11-16",
+    "deadline": "2026-12-06",
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-16T01:08:15.507Z",
+    "modified_at": null
+  },
+  {
     "article_id": 154842,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154842/artclView.do",
     "board_no": 16234,
@@ -235,7 +255,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-11T05:29:26.754Z",
     "modified_at": null
   },
