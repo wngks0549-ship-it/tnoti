@@ -1,5 +1,51 @@
 [
   {
+    "article_id": 154916,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154916/artclView.do",
+    "board_no": 16248,
+    "title": "『청년 해외안전여행 안내』",
+    "author_dept": "학생지원팀",
+    "posted_at": "2026-11-18",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-18T01:43:48.629Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154914,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154914/artclView.do",
+    "board_no": 16247,
+    "title": "(중요)2027학년도 1학기 국가장학금 1차 신청 안내( '26.11.24(화)",
+    "author_dept": "학생지원팀",
+    "posted_at": "2026-11-18",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "장학"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "장학",
+          "field": "title",
+          "keyword": "장학"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-18T01:43:48.629Z",
+    "modified_at": null
+  },
+  {
     "article_id": 154898,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154898/artclView.do",
     "board_no": 16246,
@@ -187,7 +233,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-16T07:58:11.141Z",
     "modified_at": null
   },
@@ -207,7 +253,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-16T07:58:11.141Z",
     "modified_at": null
   },
