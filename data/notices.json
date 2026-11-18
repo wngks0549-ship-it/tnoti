@@ -1,5 +1,83 @@
 [
   {
+    "article_id": 154928,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154928/artclView.do",
+    "board_no": 16251,
+    "title": "[매화청소년문화센터] 26-2학기 교외 국가근로장학생 모집 안내",
+    "author_dept": "학생지원팀",
+    "posted_at": "2026-11-18",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "근로",
+      "장학"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "근로",
+          "field": "title",
+          "keyword": "근로"
+        },
+        {
+          "category": "장학",
+          "field": "title",
+          "keyword": "장학"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-18T09:15:49.588Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154927,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154927/artclView.do",
+    "board_no": 16250,
+    "title": "2026년 (재)청로장학재단 제7기 장학생 선발 안내",
+    "author_dept": "학생지원팀",
+    "posted_at": "2026-11-18",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "장학"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "장학",
+          "field": "title",
+          "keyword": "장학"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-18T09:15:49.588Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154922,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154922/artclView.do",
+    "board_no": 16249,
+    "title": "생활관 RC 가죽공예 (11.24 화)",
+    "author_dept": "생활관",
+    "posted_at": "2026-11-18",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-18T09:15:49.588Z",
+    "modified_at": null
+  },
+  {
     "article_id": 154916,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154916/artclView.do",
     "board_no": 16248,
@@ -167,7 +245,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-16T18:20:45.108Z",
     "modified_at": null
   },
@@ -187,7 +265,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-16T18:20:45.108Z",
     "modified_at": "2026-11-17T01:57:24.105Z"
   },
@@ -213,7 +291,7 @@
         }
       ]
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-16T07:58:11.141Z",
     "modified_at": null
   },
