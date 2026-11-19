@@ -118,5 +118,15 @@
     "modified_count": 0,
     "deleted_count": 0,
     "fail_reason": null
+  },
+  {
+    "run_at": "2026-11-19T07:54:16.527Z",
+    "run_type": "new",
+    "target_url": "https://tukorea.ac.kr/tukorea/7607/subview.do",
+    "status": "success",
+    "new_count": 3,
+    "modified_count": 0,
+    "deleted_count": 0,
+    "fail_reason": null
   }
 ]

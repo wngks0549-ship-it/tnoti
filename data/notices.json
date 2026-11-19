@@ -1,5 +1,71 @@
 [
   {
+    "article_id": 154946,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154946/artclView.do",
+    "board_no": 16254,
+    "title": "2026-2학기 학부생 분납자 4차등록 안내",
+    "author_dept": "회계팀",
+    "posted_at": "2026-11-19",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-19T07:54:16.527Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154942,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154942/artclView.do",
+    "board_no": 16253,
+    "title": "[K-하이테크 플랫폼] AI 시대, 기술과 사고의 진화 세미나 참석 안내",
+    "author_dept": "전정수",
+    "posted_at": "2026-11-19",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "특강"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "특강",
+          "field": "title",
+          "keyword": "세미나"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-19T07:54:16.527Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154934,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154934/artclView.do",
+    "board_no": 16252,
+    "title": "[도서관] 2026학년도 2학기 기말고사 기간 도서관 운영안내",
+    "author_dept": "도서관",
+    "posted_at": "2026-11-19",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-19T07:54:16.527Z",
+    "modified_at": null
+  },
+  {
     "article_id": 154928,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154928/artclView.do",
     "board_no": 16251,
@@ -179,7 +245,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-17T10:29:52.357Z",
     "modified_at": null
   },
@@ -199,7 +265,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-17T10:29:52.357Z",
     "modified_at": null
   },
@@ -225,7 +291,7 @@
         }
       ]
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-16T18:20:45.108Z",
     "modified_at": null
   },
