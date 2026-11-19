@@ -1,5 +1,25 @@
 [
   {
+    "article_id": 154951,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154951/artclView.do",
+    "board_no": 16255,
+    "title": "[학사운영팀] 수료예정확인서 발급에 대한 안내",
+    "author_dept": "학사운영팀_학적",
+    "posted_at": "2026-11-19",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-19T17:08:58.139Z",
+    "modified_at": null
+  },
+  {
     "article_id": 154946,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154946/artclView.do",
     "board_no": 16254,
@@ -225,7 +245,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-17T10:29:52.357Z",
     "modified_at": null
   },
