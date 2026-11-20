@@ -1,5 +1,25 @@
 [
   {
+    "article_id": 154968,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154968/artclView.do",
+    "board_no": 16259,
+    "title": "[도서관] 온라인 코딩 교육 코드잇 2026년도 4차수 이용자 모집안내",
+    "author_dept": "도서관",
+    "posted_at": "2026-11-20",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-20T13:12:14.998Z",
+    "modified_at": null
+  },
+  {
     "article_id": 154956,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154956/artclView.do",
     "board_no": 16258,
@@ -219,7 +239,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-18T09:15:49.588Z",
     "modified_at": null
   },
