@@ -1,5 +1,65 @@
 [
   {
+    "article_id": 154956,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154956/artclView.do",
+    "board_no": 16258,
+    "title": "[도서관] AI와 노동의 미래ㅣ국립중앙박물관 굿즈의 사례로 보는 전통예술의 재발견과 문화",
+    "author_dept": "도서관",
+    "posted_at": "2026-11-20",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-20T04:16:21.666Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154954,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154954/artclView.do",
+    "board_no": 16257,
+    "title": "2027년 제21기 지역특화청년무역전문가양성사업단(GTEP) 모집 #GTEP #gtep #",
+    "author_dept": "GTEP사업단",
+    "posted_at": "2026-11-20",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-20T04:16:21.666Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154953,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154953/artclView.do",
+    "board_no": 16256,
+    "title": "[학사운영팀] 2026학년도 2학기 학점포기 신청 안내(12. 1.(화) ~ 12.7.(월",
+    "author_dept": "학사운영팀_성적졸업",
+    "posted_at": "2026-11-20",
+    "deadline": "2026-12-07",
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-20T04:16:21.666Z",
+    "modified_at": null
+  },
+  {
     "article_id": 154951,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154951/artclView.do",
     "board_no": 16255,
@@ -179,7 +239,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-18T01:43:48.629Z",
     "modified_at": null
   },
@@ -205,7 +265,7 @@
         }
       ]
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-18T01:43:48.629Z",
     "modified_at": null
   },
@@ -225,7 +285,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-17T10:29:52.357Z",
     "modified_at": null
   },
