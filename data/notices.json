@@ -1,5 +1,215 @@
 [
   {
+    "article_id": 155025,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155025/artclView.do",
+    "board_no": 16275,
+    "title": "💙[봉사시간 지급] 마을축제 자원봉사자 모집 안내(12/5(토))💙",
+    "author_dept": "창업교육센터",
+    "posted_at": "2026-11-23",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "창업"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "창업",
+          "field": "author_dept",
+          "keyword": "창업"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-23T14:08:35.347Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155024,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155024/artclView.do",
+    "board_no": 16274,
+    "title": "[도서관] 11월 TU_MOVIE DAY 상영 안내",
+    "author_dept": "도서관",
+    "posted_at": "2026-11-23",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-23T14:08:35.347Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155021,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155021/artclView.do",
+    "board_no": 16273,
+    "title": "2026 겨울방학 계절학기/집중영어/기업인재 계절학기 생활관 입주생 모집 안내",
+    "author_dept": "학생생활복지센터",
+    "posted_at": "2026-11-23",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-23T14:08:35.347Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155020,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155020/artclView.do",
+    "board_no": 16272,
+    "title": "2026 겨울방학 (동계방학 전기간) 생활관 입주생 모집 안내",
+    "author_dept": "학생생활복지센터",
+    "posted_at": "2026-11-23",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-23T14:08:35.347Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155019,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155019/artclView.do",
+    "board_no": 16271,
+    "title": "[도서관][파일수정] 2026학년도 2학기 동계방학 근로장학생 모집 안내",
+    "author_dept": "도서관",
+    "posted_at": "2026-11-23",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "근로",
+      "장학"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "근로",
+          "field": "title",
+          "keyword": "근로"
+        },
+        {
+          "category": "장학",
+          "field": "title",
+          "keyword": "장학"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-23T14:08:35.347Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155018,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155018/artclView.do",
+    "board_no": 16270,
+    "title": "[2026 교육성과 통합진단 조사] ★타임 이벤트★ \"오늘 참여하고 내일 김밥 쿠",
+    "author_dept": "IR센터",
+    "posted_at": "2026-11-23",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-23T14:08:35.347Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155015,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155015/artclView.do",
+    "board_no": 16269,
+    "title": "TIP 해충방역 시행 안내 (11.26 목)",
+    "author_dept": "생활관",
+    "posted_at": "2026-11-23",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-23T14:08:35.347Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155001,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155001/artclView.do",
+    "board_no": 16268,
+    "title": "2027학년도 1학기 1차 국가근로장학금 학생신청기간 안내",
+    "author_dept": "학생지원팀",
+    "posted_at": "2026-11-23",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "근로",
+      "장학"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "근로",
+          "field": "title",
+          "keyword": "근로"
+        },
+        {
+          "category": "장학",
+          "field": "title",
+          "keyword": "장학"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-23T14:08:35.347Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154998,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154998/artclView.do",
+    "board_no": 16267,
+    "title": "[학생지원팀] 교내 폐자전거 철거 안내",
+    "author_dept": "학생지원팀",
+    "posted_at": "2026-11-23",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-23T14:08:35.347Z",
+    "modified_at": null
+  },
+  {
     "article_id": 154989,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154989/artclView.do",
     "board_no": 16266,
@@ -35,7 +245,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-23T03:54:08.023Z",
     "modified_at": null
   },
@@ -55,7 +265,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-23T03:54:08.023Z",
     "modified_at": null
   },
@@ -75,7 +285,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-23T03:54:08.023Z",
     "modified_at": null
   },
@@ -101,7 +311,7 @@
         }
       ]
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-23T03:54:08.023Z",
     "modified_at": null
   },
@@ -121,7 +331,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-23T03:54:08.023Z",
     "modified_at": null
   },
@@ -153,7 +363,7 @@
         }
       ]
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-23T03:54:08.023Z",
     "modified_at": null
   },
@@ -173,7 +383,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-20T13:12:14.998Z",
     "modified_at": null
   },
@@ -193,7 +403,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-20T04:16:21.666Z",
     "modified_at": null
   },
@@ -213,7 +423,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-20T04:16:21.666Z",
     "modified_at": null
   },
