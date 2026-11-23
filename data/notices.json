@@ -1,5 +1,163 @@
 [
   {
+    "article_id": 154989,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154989/artclView.do",
+    "board_no": 16266,
+    "title": "[한국공학대학교 대학원] 2027학년도 전기 2차 모집 안내",
+    "author_dept": "대학원 교학팀",
+    "posted_at": "2026-11-23",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-23T03:54:08.023Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154986,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154986/artclView.do",
+    "board_no": 16265,
+    "title": "2026학년도 2학기 기말고사·성적입력기간 중 휴학 및 자퇴 처리 불가 안내",
+    "author_dept": "학사운영팀_학적",
+    "posted_at": "2026-11-23",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-23T03:54:08.023Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154985,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154985/artclView.do",
+    "board_no": 16264,
+    "title": "[커뮤니케이션교육센터] 2026 동계방학 토익향상캠프1,2(종일반/반일반) 안내",
+    "author_dept": "커뮤니케이션교육센터",
+    "posted_at": "2026-11-23",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-23T03:54:08.023Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154984,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154984/artclView.do",
+    "board_no": 16263,
+    "title": "[경진대회]『한국산학협력학회 제7회 창의혁신 캡스톤디자인 경진대회 참가 안내』",
+    "author_dept": "학생지원팀",
+    "posted_at": "2026-11-23",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-23T03:54:08.023Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154983,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154983/artclView.do",
+    "board_no": 16262,
+    "title": "2026학년도 2학기 꿈지원장학금 신청 안내",
+    "author_dept": "학생지원팀",
+    "posted_at": "2026-11-23",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "장학"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "장학",
+          "field": "title",
+          "keyword": "장학"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-23T03:54:08.023Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154982,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154982/artclView.do",
+    "board_no": 16261,
+    "title": "2026학년도 2학기 기말고사 시행 및 부정행위, 추가시험 안내",
+    "author_dept": "학사운영팀_성적졸업",
+    "posted_at": "2026-11-23",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-23T03:54:08.023Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 154981,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154981/artclView.do",
+    "board_no": 16260,
+    "title": "[청년스테이션] 26-2학기 교외 국가근로장학생 모집 안내",
+    "author_dept": "학생지원팀",
+    "posted_at": "2026-11-23",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "근로",
+      "장학"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "근로",
+          "field": "title",
+          "keyword": "근로"
+        },
+        {
+          "category": "장학",
+          "field": "title",
+          "keyword": "장학"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-23T03:54:08.023Z",
+    "modified_at": null
+  },
+  {
     "article_id": 154968,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/154968/artclView.do",
     "board_no": 16259,
@@ -75,7 +233,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-20T04:16:21.666Z",
     "modified_at": null
   },
@@ -95,7 +253,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-19T17:08:58.139Z",
     "modified_at": null
   },
@@ -115,7 +273,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-19T07:54:16.527Z",
     "modified_at": null
   },
@@ -141,7 +299,7 @@
         }
       ]
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-19T07:54:16.527Z",
     "modified_at": null
   },
@@ -161,7 +319,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-19T07:54:16.527Z",
     "modified_at": null
   },
@@ -193,7 +351,7 @@
         }
       ]
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-18T09:15:49.588Z",
     "modified_at": null
   },
@@ -219,7 +377,7 @@
         }
       ]
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-18T09:15:49.588Z",
     "modified_at": null
   },
