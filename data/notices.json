@@ -1,5 +1,183 @@
 [
   {
+    "article_id": 155059,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155059/artclView.do",
+    "board_no": 16287,
+    "title": "소프트웨어를 만드는 모든 사람을 위한 연례 '개발자 컨퍼런스' - DEV",
+    "author_dept": "창업교육센터",
+    "posted_at": "2026-11-24",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "창업"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "창업",
+          "field": "author_dept",
+          "keyword": "창업"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-24T11:40:03.111Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155057,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155057/artclView.do",
+    "board_no": 16286,
+    "title": "[현장실습지원센터] 2026 산학협력 인재양성교과 우수사례 공모전 (~12/31)",
+    "author_dept": "현장실습지원센터",
+    "posted_at": "2026-11-24",
+    "deadline": "2026-12-31",
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-24T11:40:03.111Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155056,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155056/artclView.do",
+    "board_no": 16285,
+    "title": "[미래대학] 2027학년도 1학기 다전공(복수전공)/부전공 신청 안내(변경 및 취소 포함)",
+    "author_dept": "미래대학 융합인재양성센터",
+    "posted_at": "2026-11-24",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-24T11:40:03.111Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155051,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155051/artclView.do",
+    "board_no": 16284,
+    "title": "[현장실습지원센터] '26-겨울학기 TU인턴십(현장실습) 참여 기업 안내(11.",
+    "author_dept": "현장실습지원센터",
+    "posted_at": "2026-11-24",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "취업"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "취업",
+          "field": "title",
+          "keyword": "인턴"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-24T11:40:03.111Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155046,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155046/artclView.do",
+    "board_no": 16283,
+    "title": "생활관 세탁기 내부 소독 및 세척안내 (12.1 화)",
+    "author_dept": "생활관",
+    "posted_at": "2026-11-24",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-24T11:40:03.111Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155045,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155045/artclView.do",
+    "board_no": 16282,
+    "title": "2027년 1학기 한국농어촌희망재단 농림축산식품부 대학장학금 선발 안내",
+    "author_dept": "학생지원팀",
+    "posted_at": "2026-11-24",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "장학"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "장학",
+          "field": "title",
+          "keyword": "장학"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-24T11:40:03.111Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155044,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155044/artclView.do",
+    "board_no": 16281,
+    "title": "동절기 생활관 화재 예방 및 안전수칙 안내",
+    "author_dept": "생활관",
+    "posted_at": "2026-11-24",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-24T11:40:03.111Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155033,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155033/artclView.do",
+    "board_no": 16280,
+    "title": "[2026 교육성과 통합진단 조사] ★3일 연장 이벤트★ \"오늘 참여하고 내일 김",
+    "author_dept": "IR센터",
+    "posted_at": "2026-11-24",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-24T11:40:03.111Z",
+    "modified_at": null
+  },
+  {
     "article_id": 155032,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155032/artclView.do",
     "board_no": 16279,
@@ -67,7 +245,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-24T01:40:28.117Z",
     "modified_at": null
   },
@@ -87,7 +265,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-24T01:40:28.117Z",
     "modified_at": null
   },
@@ -113,7 +291,7 @@
         }
       ]
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-23T14:08:35.347Z",
     "modified_at": null
   },
@@ -133,7 +311,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-23T14:08:35.347Z",
     "modified_at": null
   },
@@ -153,7 +331,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-23T14:08:35.347Z",
     "modified_at": null
   },
@@ -173,7 +351,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-23T14:08:35.347Z",
     "modified_at": null
   },
@@ -205,7 +383,7 @@
         }
       ]
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-23T14:08:35.347Z",
     "modified_at": null
   },
@@ -225,7 +403,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-23T14:08:35.347Z",
     "modified_at": null
   },
