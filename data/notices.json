@@ -1,5 +1,97 @@
 [
   {
+    "article_id": 155032,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155032/artclView.do",
+    "board_no": 16279,
+    "title": "[시흥배곧동우체국] 26-2학기 교외 국가근로장학생 모집 안내",
+    "author_dept": "학생지원팀",
+    "posted_at": "2026-11-24",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "근로",
+      "장학"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "근로",
+          "field": "title",
+          "keyword": "근로"
+        },
+        {
+          "category": "장학",
+          "field": "title",
+          "keyword": "장학"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-24T01:40:28.117Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155030,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155030/artclView.do",
+    "board_no": 16278,
+    "title": "[커뮤니케이션교육센터] 2026 동계방학 집중영어캠프1,2(종일반/반일반) 안내",
+    "author_dept": "커뮤니케이션교육센터",
+    "posted_at": "2026-11-24",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-24T01:40:28.117Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155029,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155029/artclView.do",
+    "board_no": 16277,
+    "title": "2026년 12월 각 군 모집 계획 홍보",
+    "author_dept": "강지영",
+    "posted_at": "2026-11-24",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-24T01:40:28.117Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155026,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155026/artclView.do",
+    "board_no": 16276,
+    "title": "기말고사 기간 생활관 통금 안내 (12.2~12.22)",
+    "author_dept": "생활관",
+    "posted_at": "2026-11-24",
+    "deadline": "2026-12-22",
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-24T01:40:28.117Z",
+    "modified_at": null
+  },
+  {
     "article_id": 155025,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155025/artclView.do",
     "board_no": 16275,
@@ -153,7 +245,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-23T14:08:35.347Z",
     "modified_at": null
   },
@@ -185,7 +277,7 @@
         }
       ]
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-23T14:08:35.347Z",
     "modified_at": null
   },
@@ -205,7 +297,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-23T14:08:35.347Z",
     "modified_at": null
   },
@@ -225,7 +317,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-23T03:54:08.023Z",
     "modified_at": null
   },
