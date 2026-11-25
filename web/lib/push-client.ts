@@ -31,18 +31,29 @@ export async function enablePush(
     return { status: "unsupported" };
   }
 
+  let step = "알림 권한 묻기";
   try {
     const permission = await Notification.requestPermission();
+    // "default" 는 묻는 창을 그냥 닫은 경우다. 막은 것이 아니라서 다시 누르면 또 물어본다.
+    if (permission === "default") {
+      return { status: "error", message: "알림을 허용할지 고르지 않았어요. 다시 눌러서 허용을 골라 주세요." };
+    }
     if (permission !== "granted") return { status: "denied" };
 
+    step = "서비스 워커 등록";
     await navigator.serviceWorker.register("/sw.js", { scope: "/", updateViaCache: "none" });
-    const registration = await navigator.serviceWorker.ready;
+    const registration = await withTimeout(navigator.serviceWorker.ready, 10_000);
+
+    step = "푸시 구독 만들기";
     const subscription =
       (await registration.pushManager.getSubscription()) ??
-      (await registration.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: urlBase64ToUint8Array(publicKey),
-      }));
+      (await withTimeout(
+        registration.pushManager.subscribe({
+          userVisibleOnly: true,
+          applicationServerKey: urlBase64ToUint8Array(publicKey),
+        }),
+        20_000,
+      ));
 
     const json = subscription.toJSON();
     if (!json.endpoint || !json.keys?.p256dh || !json.keys?.auth) {
@@ -53,7 +64,30 @@ export async function enablePush(
     if (result.error) return { status: "error", message: result.error };
     return { status: "push" };
   } catch (e) {
-    console.error("푸시 구독 실패:", e);
-    return { status: "error", message: "알림을 켜지 못했어요. 잠시 뒤에 다시 해 주세요." };
+    console.error("푸시 구독 실패:", step, e);
+    // 어느 단계에서 왜 멈췄는지 화면에 남긴다. 브라우저마다 실패하는 자리가 달라서 이 정보가 있어야 고친다.
+    const reason = e instanceof Error ? e.name : "알 수 없는 오류";
+    return { status: "error", message: `알림을 켜지 못했어요. (${step} 단계, ${reason})` };
   }
+}
+
+/** 브라우저가 답을 주지 않고 멈추는 경우에 버튼이 계속 잠겨 있지 않게 한다. */
+function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
+  return new Promise<T>((resolve, reject) => {
+    const timer = setTimeout(() => {
+      const e = new Error("시간 초과");
+      e.name = "시간 초과";
+      reject(e);
+    }, ms);
+    promise.then(
+      (v) => {
+        clearTimeout(timer);
+        resolve(v);
+      },
+      (err) => {
+        clearTimeout(timer);
+        reject(err);
+      },
+    );
+  });
 }
