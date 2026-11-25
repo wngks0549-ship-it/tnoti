@@ -3,6 +3,7 @@ import { AppNav } from "@/components/app-nav";
 import { SettingsForm } from "@/components/settings-form";
 import { TopBar } from "@/components/top-bar";
 import { getSubscription, requireMember } from "@/lib/member";
+import { savePushSubscription } from "../push-actions";
 import { deleteAccount, setFrequency, setNotifyEnabled } from "./actions";
 
 export const metadata = { title: "설정 | TNoti" };
@@ -26,6 +27,7 @@ export default async function SettingsPage() {
           onNotifyChange={setNotifyEnabled}
           onFrequencyChange={setFrequency}
           onDelete={deleteAccount}
+          onPushSave={savePushSubscription}
           signoutPath="/auth/signout"
         />
       </main>

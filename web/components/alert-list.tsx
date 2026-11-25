@@ -11,7 +11,7 @@ export type AlertItem = {
   sentTime: string; // HH:MM
   match: Match;
   channel: "push" | "email";
-  status: "sent" | "failed";
+  status: "sent" | "failed" | "pending";
   note?: string;
 };
 
@@ -50,7 +50,7 @@ export function AlertList({ alerts }: { alerts: AlertItem[] }) {
               <div
                 className={`shrink-0 pt-0.5 text-meta font-bold ${failed ? "text-alert" : "text-sub"}`}
               >
-                {failed ? "실패" : CHANNEL[a.channel]}
+                {failed ? "실패" : a.status === "pending" ? "대기" : CHANNEL[a.channel]}
               </div>
             </Link>
           </li>

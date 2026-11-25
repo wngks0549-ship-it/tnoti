@@ -3,9 +3,11 @@
 // S7 설정 (FR-04 받는 방법 표시, FR-05 켜기·끄기와 주기, FR-06 탈퇴).
 // on… 과 signoutPath 를 주면 저장한다(진짜 화면). 안 주면 이 화면 안에서만 바뀐다(시안).
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { textButton } from "@/components/ui";
 import type { Subscription } from "@/lib/match";
+import { enablePush, type PushSubscriptionData } from "@/lib/push-client";
 
 type Frequency = "instant" | "twice_daily";
 type Result = { error?: string };
@@ -20,6 +22,8 @@ type Props = {
   onNotifyChange?: (enabled: boolean) => Promise<Result>;
   onFrequencyChange?: (frequency: Frequency) => Promise<Result>;
   onDelete?: () => Promise<Result>;
+  /** 이 기기의 푸시 구독을 저장하는 서버 액션. 주면 "알림 허용하기" 버튼이 보인다. */
+  onPushSave?: (sub: PushSubscriptionData) => Promise<Result>;
   /** 로그아웃을 받는 주소(POST). 없으면 버튼만 보인다. */
   signoutPath?: string;
 };
@@ -41,6 +45,7 @@ const FREQUENCIES = [
 const dangerButton = "inline-flex h-11 items-center text-body font-bold text-alert disabled:opacity-40";
 
 export function SettingsForm(props: Props) {
+  const router = useRouter();
   const [enabled, setEnabled] = useState(props.notifyEnabled);
   const [frequency, setFrequency] = useState<Frequency>(props.frequency);
   const [leaving, setLeaving] = useState(false);
@@ -62,6 +67,20 @@ export function SettingsForm(props: Props) {
       apply(prev);
       setError(result.error);
     }
+  }
+
+  async function allowPush() {
+    if (!props.onPushSave || busy) return;
+    setBusy(true);
+    setError(null);
+    const outcome = await enablePush(props.onPushSave);
+    setBusy(false);
+    if (outcome.status === "push") router.refresh();
+    else if (outcome.status === "denied")
+      setError("이 브라우저에서 알림이 막혀 있어요. 브라우저의 사이트 설정에서 알림을 허용한 뒤 다시 해 주세요.");
+    else if (outcome.status === "unsupported")
+      setError("이 기기에서는 웹 푸시를 쓸 수 없어요. 아이폰은 홈 화면에 추가한 뒤 다시 해 보세요.");
+    else setError(outcome.message);
   }
 
   async function leave() {
@@ -146,6 +165,11 @@ export function SettingsForm(props: Props) {
             ? "푸시가 가지 않으면 학교 메일로 대신 보내요."
             : "이 기기에서 알림을 허용하지 않아서 메일로 보내요."}
         </p>
+        {props.channel === "email" && props.onPushSave && (
+          <button type="button" className={textButton} disabled={busy} onClick={allowPush}>
+            이 기기에서 알림 허용하기
+          </button>
+        )}
       </Section>
 
       <Section title="구독">

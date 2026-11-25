@@ -65,3 +65,40 @@ proxy.ts             요청마다 세션을 갱신하고 로그인이 필요한 
 ```
 
 학교 메일(`@tukorea.ac.kr`) 제한은 두 곳에서 한다: `app/login/actions.ts`(안내 문구)와 DB 트리거(`supabase/migrations/20261125051159_member_on_signup.sql`, 실제 차단).
+
+## 알림 발송
+
+흐름: 새 공지 저장 → 매칭(DB 함수 `enqueue_notifications`) → 푸시 발송(`POST /api/dispatch`) → 결과 기록(`notification`).
+
+- 매칭 규칙은 두 곳에 있다: 화면용 `lib/match.ts`, 발송용 DB 함수. 바꾸면 둘 다 고친다.
+- `/api/dispatch`는 `Authorization: Bearer <DISPATCH_SECRET>`이 있어야 실행된다. 수집 뒤나 예약 실행에서 부른다.
+- 브라우저 쪽은 `public/sw.js`(서비스 워커)와 `lib/push-client.ts`(알림 허용, 푸시 구독)다.
+- 아직 안 하는 것: 메일 발송(메일 채널, 푸시 실패 시 대체), 하루 두 번 묶음 발송. 이 알림들은 `requested` 상태로 남고 알림 내역에 "대기"로 보인다.
+
+### 필요한 값 (`.env.local`, 배포할 때는 환경 변수)
+
+| 이름 | 무엇 | 어디서 |
+| --- | --- | --- |
+| `NEXT_PUBLIC_VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY` | 웹 푸시 키 한 쌍 | `npx web-push generate-vapid-keys` |
+| `SUPABASE_SECRET_KEY` | Supabase 서버용 비밀 키 | 대시보드 → Project Settings → API Keys |
+| `DISPATCH_SECRET` | 발송 주소를 부를 때 쓰는 값 | 아무 긴 무작위 글자 |
+
+비밀 값은 저장소, 채팅, 문서에 적지 않는다.
+
+### 손으로 시험하기
+
+1. 브라우저에서 로그인하고 설정에서 "이 기기에서 알림 허용하기"를 누른다.
+2. Supabase SQL 편집기에서 시험용 공지를 넣는다(구독한 키워드가 제목에 들어가게).
+
+   ```sql
+   insert into public.notice (notice_id, source_url, title, author_dept, posted_at)
+   values (990000001, 'https://tukorea.ac.kr/tukorea/7607/subview.do', '[시험] AI 특강 안내', 'TNoti 시험', current_date);
+   ```
+
+3. 발송을 부른다.
+
+   ```bash
+   curl -X POST http://localhost:3000/api/dispatch -H "Authorization: Bearer <DISPATCH_SECRET 값>"
+   ```
+
+4. 끝나면 시험용 공지를 지운다: `delete from public.notice where notice_id = 990000001;`

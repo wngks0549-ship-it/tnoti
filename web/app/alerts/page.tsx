@@ -30,9 +30,16 @@ const kst = new Intl.DateTimeFormat("sv-SE", {
 function toItem(r: Row): AlertItem {
   const [date, time] = kst.format(new Date(r.sent_at ?? r.created_at)).split(" ");
   const failed = r.send_status === "failed";
+  const pending = r.send_status === "requested";
   const note = failed
     ? "보내지 못했어요."
-    : r.channel === "email" && r.retry_count > 0
+    : pending
+      ? r.channel === "email"
+        ? "메일 발송은 아직 준비 중이에요."
+        : r.is_digest
+          ? "다음 묶음 시간(12시, 20시)에 보내요."
+          : "곧 보내요."
+      : r.channel === "email" && r.retry_count > 0
       ? "푸시가 가지 않아서 메일로 보냈어요."
       : r.is_digest
         ? "하루 두 번 묶음으로 보냈어요."
@@ -46,7 +53,7 @@ function toItem(r: Row): AlertItem {
     sentTime: time,
     match: { by: r.matched_by, value: r.matched_value },
     channel: r.channel,
-    status: failed ? "failed" : "sent",
+    status: failed ? "failed" : pending ? "pending" : "sent",
     note,
   };
 }

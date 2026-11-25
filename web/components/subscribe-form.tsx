@@ -1,14 +1,14 @@
 "use client";
 
 // S3 구독 설정 (FR-03, FR-04). 두 걸음이다: ① 카테고리·키워드 고르기 ② 알림 허용.
-// persist 를 주면 저장하고(진짜 화면), 안 주면 저장 없이 넘어간다(시안).
-// 실제 알림 허용(푸시 구독)은 푸시 발송을 만들 때 붙인다.
+// persist 와 push 를 주면 저장하고 실제로 알림을 켠다(진짜 화면). 안 주면 그냥 넘어간다(시안).
 import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import { chip, primaryButton, textButton, textInput } from "@/components/ui";
 import { shortDate } from "@/lib/format";
 import { keywordProblem, matchLabel, matchNotice, type Subscription } from "@/lib/match";
 import type { Notice } from "@/lib/notices";
+import { enablePush, type PushSubscriptionData } from "@/lib/push-client";
 
 type Props = {
   categories: string[];
@@ -21,6 +21,11 @@ type Props = {
   persist?: (sub: Subscription) => Promise<{ error?: string }>;
   /** 저장 뒤에 알림 허용 걸음을 보여줄지. 기본은 보여준다. */
   permissionStep?: boolean;
+  /** 받는 방법을 저장하는 서버 액션들(FR-04) */
+  push?: {
+    save: (sub: PushSubscriptionData) => Promise<{ error?: string }>;
+    useEmail: () => Promise<{ error?: string }>;
+  };
 };
 
 export function SubscribeForm({
@@ -30,6 +35,7 @@ export function SubscribeForm({
   doneHref,
   persist,
   permissionStep = true,
+  push,
 }: Props) {
   const router = useRouter();
   const [picked, setPicked] = useState<string[]>(initial.categories);
@@ -39,6 +45,9 @@ export function SubscribeForm({
   const [step, setStep] = useState<"choose" | "permission">("choose");
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
+  const [asking, setAsking] = useState(false);
+  /** 알림을 켜지 못했을 때의 안내. 있으면 허용 버튼 대신 이 안내와 넘어가기 버튼을 보여준다. */
+  const [fallback, setFallback] = useState<string | null>(null);
 
   const hits = useMemo(
     () =>
@@ -78,12 +87,39 @@ export function SubscribeForm({
         return;
       }
     }
-    if (permissionStep) {
-      setStep("permission");
-    } else {
-      router.push(doneHref);
-      router.refresh();
+    if (permissionStep) setStep("permission");
+    else done();
+  }
+
+  function done() {
+    router.push(doneHref);
+    router.refresh();
+  }
+
+  async function allow() {
+    if (!push) return done(); // 시안
+    setAsking(true);
+    const outcome = await enablePush(push.save);
+    if (outcome.status === "push") return done();
+
+    // 허용하지 않았거나 못 쓰는 기기: 메일로 받는다(FR-04)
+    await push.useEmail();
+    setAsking(false);
+    setFallback(
+      outcome.status === "denied"
+        ? "이 브라우저에서 알림이 막혀 있어요. 학교 메일로 보낼게요. 설정에서 언제든 다시 허용할 수 있어요."
+        : outcome.status === "unsupported"
+          ? "이 기기에서는 웹 푸시를 쓸 수 없어요. 학교 메일로 보낼게요."
+          : `${outcome.message} 지금은 학교 메일로 보낼게요.`,
+    );
+  }
+
+  async function chooseEmail() {
+    if (push) {
+      setAsking(true);
+      await push.useEmail();
     }
+    done();
   }
 
   if (step === "permission") {
@@ -110,16 +146,30 @@ export function SubscribeForm({
           </div>
         )}
 
-        <button type="button" className={`${primaryButton} mt-8`} onClick={() => router.push(doneHref)}>
-          알림 허용하기
-        </button>
-        <button
-          type="button"
-          className={`${textButton} mt-2 justify-center`}
-          onClick={() => router.push(doneHref)}
-        >
-          메일로 받을게요
-        </button>
+        {fallback ? (
+          <>
+            <p aria-live="polite" className="mt-8 text-body">
+              {fallback}
+            </p>
+            <button type="button" className={`${primaryButton} mt-4`} onClick={done}>
+              공지 보러 가기
+            </button>
+          </>
+        ) : (
+          <>
+            <button type="button" disabled={asking} className={`${primaryButton} mt-8`} onClick={allow}>
+              {asking ? "기다리는 중" : "알림 허용하기"}
+            </button>
+            <button
+              type="button"
+              disabled={asking}
+              className={`${textButton} mt-2 justify-center`}
+              onClick={chooseEmail}
+            >
+              메일로 받을게요
+            </button>
+          </>
+        )}
 
         <p className="mt-6 text-meta text-sub">
           아이폰은 Safari의 공유 버튼에서 ‘홈 화면에 추가’를 한 뒤, 홈 화면의 TNoti에서 허용해야 알림이 와요.
