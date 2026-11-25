@@ -1,5 +1,45 @@
 [
   {
+    "article_id": 155068,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155068/artclView.do",
+    "board_no": 16289,
+    "title": "[경진대회]『2026년 캡스톤디자인 온라인 경진대회 안내』",
+    "author_dept": "학생지원팀",
+    "posted_at": "2026-11-25",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-25T04:34:26.603Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155063,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155063/artclView.do",
+    "board_no": 16288,
+    "title": "제14회 한국공학대학교 총장배 CAE 경진대회 수상작 발표",
+    "author_dept": "스마트기계융합대학 기계공학과",
+    "posted_at": "2026-11-25",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-25T04:34:26.603Z",
+    "modified_at": null
+  },
+  {
     "article_id": 155059,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155059/artclView.do",
     "board_no": 16287,
@@ -205,7 +245,7 @@
         }
       ]
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-24T01:40:28.117Z",
     "modified_at": null
   },
@@ -225,7 +265,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-24T01:40:28.117Z",
     "modified_at": null
   },
