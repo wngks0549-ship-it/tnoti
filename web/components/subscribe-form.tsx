@@ -1,7 +1,8 @@
 "use client";
 
 // S3 구독 설정 (FR-03, FR-04). 두 걸음이다: ① 카테고리·키워드 고르기 ② 알림 허용.
-// 지금은 화면만 있다. 저장(persist)과 실제 알림 허용(onAllow)은 로그인 연결 뒤에 붙인다.
+// persist 를 주면 저장하고(진짜 화면), 안 주면 저장 없이 넘어간다(시안).
+// 실제 알림 허용(푸시 구독)은 푸시 발송을 만들 때 붙인다.
 import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import { chip, primaryButton, textButton, textInput } from "@/components/ui";
@@ -16,15 +17,28 @@ type Props = {
   recent: Notice[];
   /** 끝난 뒤 갈 곳 */
   doneHref: string;
+  /** 저장하는 서버 액션. 실패하면 error 에 안내 문구가 온다. */
+  persist?: (sub: Subscription) => Promise<{ error?: string }>;
+  /** 저장 뒤에 알림 허용 걸음을 보여줄지. 기본은 보여준다. */
+  permissionStep?: boolean;
 };
 
-export function SubscribeForm({ categories, initial, recent, doneHref }: Props) {
+export function SubscribeForm({
+  categories,
+  initial,
+  recent,
+  doneHref,
+  persist,
+  permissionStep = true,
+}: Props) {
   const router = useRouter();
   const [picked, setPicked] = useState<string[]>(initial.categories);
   const [keywords, setKeywords] = useState<string[]>(initial.keywords);
   const [draft, setDraft] = useState("");
   const [keywordError, setKeywordError] = useState<string | null>(null);
   const [step, setStep] = useState<"choose" | "permission">("choose");
+  const [saving, setSaving] = useState(false);
+  const [saveError, setSaveError] = useState<string | null>(null);
 
   const hits = useMemo(
     () =>
@@ -50,6 +64,26 @@ export function SubscribeForm({ categories, initial, recent, doneHref }: Props) 
     setKeywords((cur) => [...cur, keyword]);
     setDraft("");
     setKeywordError(null);
+  }
+
+  async function save() {
+    if (empty || saving) return;
+    if (persist) {
+      setSaving(true);
+      setSaveError(null);
+      const result = await persist({ categories: picked, keywords });
+      setSaving(false);
+      if (result.error) {
+        setSaveError(result.error);
+        return;
+      }
+    }
+    if (permissionStep) {
+      setStep("permission");
+    } else {
+      router.push(doneHref);
+      router.refresh();
+    }
   }
 
   if (step === "permission") {
@@ -99,7 +133,7 @@ export function SubscribeForm({ categories, initial, recent, doneHref }: Props) 
       className="flex flex-1 flex-col"
       onSubmit={(e) => {
         e.preventDefault();
-        if (!empty) setStep("permission");
+        void save();
       }}
     >
       <div className="flex-1 px-5 pt-10 pb-8">
@@ -221,13 +255,17 @@ export function SubscribeForm({ categories, initial, recent, doneHref }: Props) 
       </div>
 
       <div className="sticky bottom-0 border-t border-line bg-paper px-5 pt-3 pb-4">
-        <p className="mb-2 text-meta text-sub">
-          {empty
-            ? "카테고리나 키워드를 하나 이상 골라야 저장할 수 있어요."
-            : "바꾼 조건은 다음 알림부터 적용돼요."}
+        <p
+          aria-live="polite"
+          className={`mb-2 text-meta ${saveError ? "text-alert" : "text-sub"}`}
+        >
+          {saveError ??
+            (empty
+              ? "카테고리나 키워드를 하나 이상 골라야 저장할 수 있어요."
+              : "바꾼 조건은 다음 알림부터 적용돼요.")}
         </p>
-        <button type="submit" disabled={empty} className={primaryButton}>
-          저장하고 알림 받기
+        <button type="submit" disabled={empty || saving} className={primaryButton}>
+          {saving ? "저장하는 중" : "저장하고 알림 받기"}
         </button>
       </div>
     </form>

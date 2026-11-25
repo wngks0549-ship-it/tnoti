@@ -20,7 +20,10 @@ npm run dev
 | `/` | S1 랜딩 | FR-01 | 불필요 |
 | `/login` | S2 가입·로그인 | FR-02 | 불필요 |
 | `/notices/{번호}` | S5 공지 상세 | FR-13 | 불필요 |
-| `/subscribe` | S3 구독 설정 자리(지금은 로그인 확인만) | FR-03, FR-04 예정 | 필요 |
+| `/subscribe` | S3 구독 설정(저장까지. 알림 허용은 푸시를 만들 때) | FR-03 | 필요 |
+| `/notices` | S4 맞춤 공지 목록 | FR-12 | 필요 |
+| `/alerts` | S6 알림 내역(발송을 만들기 전에는 비어 있다) | FR-14 | 필요 |
+| `/settings` | S7 설정(알림 켜기·끄기, 주기, 로그아웃, 탈퇴) | FR-05, FR-06 | 필요 |
 
 ## 시안 (로그인 없이 보는 화면)
 
@@ -33,7 +36,7 @@ npm run dev
 | `/preview/alerts` | S6 알림 내역 | `components/alert-list.tsx` |
 | `/preview/settings` | S7 설정 | `components/settings-form.tsx` |
 
-진짜 화면(`/subscribe`, `/notices`, `/alerts`, `/settings`)은 같은 조각에 로그인한 회원의 데이터를 넣어서 만든다. 아직 연결하지 않았다.
+진짜 화면(`/subscribe`, `/notices`, `/alerts`, `/settings`)은 같은 조각에 로그인한 회원의 데이터를 넣은 것이다.
 
 ## 로그인이 되려면 (Supabase 대시보드에서 한 번)
 

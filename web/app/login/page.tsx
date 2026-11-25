@@ -1,4 +1,4 @@
-// S2 가입·로그인 (FR-02): 로그인 없이 열린다. 이미 로그인했으면 구독 설정으로 보낸다.
+// S2 가입·로그인 (FR-02): 로그인 없이 열린다. 이미 로그인했으면 맞춤 목록으로 보낸다.
 import { redirect } from "next/navigation";
 import { TopBar } from "@/components/top-bar";
 import { createClient } from "@/lib/supabase/server";
@@ -13,7 +13,7 @@ export default async function LoginPage({
 }) {
   const supabase = await createClient();
   const { data } = await supabase.auth.getClaims();
-  if (data?.claims) redirect("/subscribe");
+  if (data?.claims) redirect("/notices");
 
   const { error } = await searchParams;
 

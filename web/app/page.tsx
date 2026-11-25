@@ -1,11 +1,16 @@
 // S1 랜딩 (FR-01): 로그인 없이 열린다. 서비스 소개, 카테고리 목록, 시작하기.
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { NoticeRow } from "@/components/notice-row";
 import { TopBar } from "@/components/top-bar";
 import { primaryButton } from "@/components/ui";
+import { isLoggedIn } from "@/lib/member";
 import { getAlertCategories, getLatestNotices } from "@/lib/notices";
 
 export default async function LandingPage() {
+  // 로그인한 회원에게 첫 화면은 맞춤 목록(S4)이다.
+  if (await isLoggedIn()) redirect("/notices");
+
   const [categories, notices] = await Promise.all([getAlertCategories(), getLatestNotices(5)]);
 
   return (

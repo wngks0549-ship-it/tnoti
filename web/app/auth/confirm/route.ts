@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
     const supabase = await createClient();
     const { error } = await supabase.auth.verifyOtp({ type, token_hash });
     if (!error) {
-      redirectTo.pathname = "/subscribe";
+      redirectTo.pathname = "/notices";
       return NextResponse.redirect(redirectTo);
     }
   }

@@ -13,6 +13,23 @@ function needsLogin(pathname: string) {
 }
 
 export async function updateSession(request: NextRequest) {
+  // Supabase 가 로그인 링크를 첫 화면(Site URL)으로 돌려보낸 경우: code 는 /auth/callback 으로 넘기고,
+  // 만료 같은 오류는 로그인 화면에서 안내한다.
+  if (request.nextUrl.pathname === "/") {
+    const params = request.nextUrl.searchParams;
+    if (params.has("code")) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/auth/callback";
+      return NextResponse.redirect(url);
+    }
+    if (params.has("error_code") || params.has("error")) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/login";
+      url.search = "?error=link";
+      return NextResponse.redirect(url);
+    }
+  }
+
   let supabaseResponse = NextResponse.next({ request });
 
   const supabase = createServerClient(
