@@ -1,5 +1,77 @@
 [
   {
+    "article_id": 155077,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155077/artclView.do",
+    "board_no": 16292,
+    "title": "2026학년도 동계학기 프로그래밍기초역량강화 비교과프로그램 안내",
+    "author_dept": "AI교육협력센터",
+    "posted_at": "2026-11-25",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "비교과"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "비교과",
+          "field": "title",
+          "keyword": "비교과"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-25T14:55:29.833Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155076,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155076/artclView.do",
+    "board_no": 16291,
+    "title": "[공학최고경영교육원(ITP)] 12/8 단기 봉사장학생 모집 안내",
+    "author_dept": "김주란",
+    "posted_at": "2026-11-25",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "장학"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "장학",
+          "field": "title",
+          "keyword": "장학"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-25T14:55:29.833Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155072,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155072/artclView.do",
+    "board_no": 16290,
+    "title": "동절기 난방 운영 및 에너지 절약 안내",
+    "author_dept": "시설관리팀",
+    "posted_at": "2026-11-25",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-25T14:55:29.833Z",
+    "modified_at": null
+  },
+  {
     "article_id": 155068,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155068/artclView.do",
     "board_no": 16289,
@@ -173,7 +245,7 @@
         }
       ]
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-24T11:40:03.111Z",
     "modified_at": null
   },
@@ -193,7 +265,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-24T11:40:03.111Z",
     "modified_at": null
   },
@@ -213,7 +285,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-24T11:40:03.111Z",
     "modified_at": null
   },
