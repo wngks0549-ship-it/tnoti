@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* 값의 근거는 저장소 루트의 theme.md 에 있다. 여기서 값을 바꾸면 theme.md 도 같이 고친다. */
+@theme {
+  --color-paper: #ffffff;
+  --color-ground: #f5f6f8;
+  --color-ink: #191919;
+  --color-sub: #5f6875;
+  --color-navy: #004098;
+  --color-navy-tint: #eaf0f8;
+  --color-line: #e2e2e2;
+  --color-alert: #d92d20;
+
+  --font-sans: "Pretendard Variable", Pretendard, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+
+  /* 글자 크기 5단계: 13 / 15 / 17 / 22 / 28 */
+  --text-meta: 0.8125rem;
+  --text-meta--line-height: 1.5;
+  --text-meta--letter-spacing: -0.01em;
+  --text-body: 0.9375rem;
+  --text-body--line-height: 1.55;
+  --text-body--letter-spacing: -0.01em;
+  --text-title: 1.0625rem;
+  --text-title--line-height: 1.4;
+  --text-title--letter-spacing: -0.01em;
+  --text-head: 1.375rem;
+  --text-head--line-height: 1.35;
+  --text-head--letter-spacing: -0.02em;
+  --text-display: 1.75rem;
+  --text-display--line-height: 1.3;
+  --text-display--letter-spacing: -0.02em;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  word-break: keep-all; /* 한글을 단어 단위로 줄바꿈 */
+  overflow-wrap: anywhere;
+}
+
+/* base 층에 둬야 Tailwind 의 outline-none 같은 클래스가 이 규칙을 이긴다 */
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-navy);
+    outline-offset: 2px;
+  }
+}
+
+/* 날짜와 D-day 는 자릿수 폭을 맞춘다 */
+.nums {
+  font-variant-numeric: tabular-nums;
+}

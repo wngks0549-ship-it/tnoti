@@ -1,0 +1,28 @@
+// S2 가입·로그인 (FR-02): 로그인 없이 열린다. 이미 로그인했으면 구독 설정으로 보낸다.
+import { redirect } from "next/navigation";
+import { TopBar } from "@/components/top-bar";
+import { createClient } from "@/lib/supabase/server";
+import { LoginPanel } from "./login-panel";
+
+export const metadata = { title: "로그인 | TNoti" };
+
+export default async function LoginPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>;
+}) {
+  const supabase = await createClient();
+  const { data } = await supabase.auth.getClaims();
+  if (data?.claims) redirect("/subscribe");
+
+  const { error } = await searchParams;
+
+  return (
+    <>
+      <TopBar />
+      <main className="flex flex-1 flex-col px-5 pt-10 pb-10">
+        <LoginPanel linkError={error === "link"} />
+      </main>
+    </>
+  );
+}
