@@ -2,8 +2,11 @@ import Link from "next/link";
 import { daysLeft, ddayLabel, shortDate, weekday } from "@/lib/format";
 import type { Notice } from "@/lib/notices";
 
-/** 공지 한 줄: 날짜 기둥 + 제목(자르지 않는다) + 부서·카테고리 + D-day */
-export function NoticeRow({ notice }: { notice: Notice }) {
+/**
+ * 공지 한 줄: 날짜 기둥 + 제목(자르지 않는다) + 부서·카테고리 + D-day.
+ * keywordHit 은 키워드로 걸린 공지일 때 그 키워드다.
+ */
+export function NoticeRow({ notice, keywordHit }: { notice: Notice; keywordHit?: string }) {
   const left = notice.deadline ? daysLeft(notice.deadline) : null;
 
   return (
@@ -16,11 +19,12 @@ export function NoticeRow({ notice }: { notice: Notice }) {
 
         <div className="min-w-0 flex-1">
           <p className="text-title font-bold">{notice.title}</p>
-          <p className="mt-1 text-meta text-sub">
-            {notice.author_dept}
+          <p className="mt-1 flex flex-wrap gap-x-2 text-meta text-sub">
+            <span>{notice.author_dept}</span>
             {notice.categories.length > 0 && (
-              <span className="ml-2 font-bold text-navy">{notice.categories.join(", ")}</span>
+              <span className="font-bold text-navy">{notice.categories.join(", ")}</span>
             )}
+            {keywordHit && <span className="font-bold text-navy">키워드 ‘{keywordHit}’</span>}
           </p>
         </div>
 

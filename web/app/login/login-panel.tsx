@@ -20,9 +20,17 @@ export function LoginPanel({ linkError }: { linkError: boolean }) {
           <br />
           15분 안에 메일의 링크를 누르면 로그인돼요. 메일이 안 보이면 스팸함도 확인해 주세요.
         </p>
-        <button type="button" className={`${textButton} mt-6`} onClick={() => setAgain(true)}>
-          주소를 다시 입력하기
-        </button>
+        <div className="mt-6 flex gap-6">
+          <form action={formAction}>
+            <input type="hidden" name="id" value={state.email} />
+            <button type="submit" disabled={pending} className={textButton}>
+              {pending ? "보내는 중" : "메일 다시 보내기"}
+            </button>
+          </form>
+          <button type="button" className={textButton} onClick={() => setAgain(true)}>
+            주소 바꾸기
+          </button>
+        </div>
       </div>
     );
   }

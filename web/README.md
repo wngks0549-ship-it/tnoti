@@ -22,7 +22,18 @@ npm run dev
 | `/notices/{번호}` | S5 공지 상세 | FR-13 | 불필요 |
 | `/subscribe` | S3 구독 설정 자리(지금은 로그인 확인만) | FR-03, FR-04 예정 | 필요 |
 
-아직 없는 화면: S4 맞춤 공지 목록(`/notices`), S6 알림 내역(`/alerts`), S7 설정(`/settings`).
+## 시안 (로그인 없이 보는 화면)
+
+`/preview`에서 화면 7개를 한 번에 열 수 있다. 공지는 실제 데이터이고 계정·구독·알림 기록은 예시다. 눌러도 저장되지 않는다.
+
+| 주소 | 화면 | 쓰는 조각 |
+| --- | --- | --- |
+| `/preview/subscribe` | S3 구독 설정, 알림 허용 | `components/subscribe-form.tsx` |
+| `/preview/notices` | S4 맞춤 공지 목록 | `components/notice-list.tsx` |
+| `/preview/alerts` | S6 알림 내역 | `components/alert-list.tsx` |
+| `/preview/settings` | S7 설정 | `components/settings-form.tsx` |
+
+진짜 화면(`/subscribe`, `/notices`, `/alerts`, `/settings`)은 같은 조각에 로그인한 회원의 데이터를 넣어서 만든다. 아직 연결하지 않았다.
 
 ## 로그인이 되려면 (Supabase 대시보드에서 한 번)
 

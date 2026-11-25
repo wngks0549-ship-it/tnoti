@@ -21,9 +21,9 @@ export default async function LandingPage() {
       <main className="flex flex-1 flex-col pb-10">
         <section className="px-5 pt-10">
           <h1 className="text-display font-bold">
-            관심 있는 학교 공지만
+            찾으러 가던 학교 공지가,
             <br />
-            알림으로 받아요
+            내 폰으로 찾아와요
           </h1>
           <p className="mt-3 text-sub">
             한국공학대학교 전체공지에 새 글이 올라오면, 고른 카테고리와 키워드에 맞는 글만 알려요.

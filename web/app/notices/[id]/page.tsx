@@ -36,7 +36,7 @@ export default async function NoticePage({ params }: Props) {
 
   return (
     <>
-      <TopBar />
+      <TopBar back />
       <main className="flex flex-1 flex-col px-5 pt-7 pb-10">
         <p className="nums flex items-baseline gap-2">
           <span className="text-display font-bold text-navy">{shortDate(notice.posted_at)}</span>
@@ -49,12 +49,6 @@ export default async function NoticePage({ params }: Props) {
           <p className="mt-2 text-meta text-sub">
             학교 목록에 보이는 50자까지만 가져와서 제목 뒤가 잘렸을 수 있어요.
           </p>
-        )}
-        {notice.status === "modified" && (
-          <p className="mt-2 text-meta font-bold text-navy">학교에서 제목을 고친 공지예요.</p>
-        )}
-        {notice.status === "deleted" && (
-          <p className="mt-2 text-meta font-bold text-alert">학교 게시판에서 지워진 공지예요.</p>
         )}
 
         <dl className="mt-6 border-t border-line">
@@ -78,7 +72,16 @@ export default async function NoticePage({ params }: Props) {
                 </span>
               </span>
             ) : (
-              <span className="text-sub">제목에 날짜가 없어요. 원문에서 확인해 주세요.</span>
+              <span className="text-sub">원문 확인 (제목에 날짜가 없어요)</span>
+            )}
+          </Row>
+          <Row label="수정 여부">
+            {notice.status === "modified" ? (
+              <span className="font-bold text-navy">학교에서 제목을 고쳤어요</span>
+            ) : notice.status === "deleted" ? (
+              <span className="font-bold text-alert">학교 게시판에서 지워졌어요</span>
+            ) : (
+              <span className="text-sub">없어요</span>
             )}
           </Row>
         </dl>
