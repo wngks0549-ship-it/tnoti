@@ -7,6 +7,7 @@ self.addEventListener("push", (event) => {
   event.waitUntil(
     self.registration.showNotification(data.title, {
       body: data.body,
+      icon: "/icon-192.png",
       tag: data.tag, // 같은 공지의 알림이 두 번 뜨지 않게 한다
       data: { url: data.url },
     }),

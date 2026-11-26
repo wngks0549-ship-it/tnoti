@@ -102,3 +102,18 @@ proxy.ts             요청마다 세션을 갱신하고 로그인이 필요한 
    ```
 
 4. 끝나면 시험용 공지를 지운다: `delete from public.notice where notice_id = 990000001;`
+
+## 배포 (Vercel)
+
+1. Vercel에서 이 저장소를 불러오고 **Root Directory를 `web`** 으로 정한다. 앱이 저장소의 하위 폴더에 있기 때문이다.
+2. 환경 변수에 `.env.local`의 여섯 값을 넣는다. Vercel의 환경 변수 입력 칸에 파일 내용을 통째로 붙여 넣으면 나뉘어 들어간다. 값을 바꾼 뒤에는 다시 배포해야 적용된다.
+3. Supabase 대시보드 → Authentication → URL Configuration에서 Site URL을 배포 주소로 바꾸고, Redirect URLs에 `https://<배포 주소>/**`를 더한다.
+4. GitHub 저장소 → Settings → Secrets and variables → Actions에 두 값을 넣는다. 수집이 끝나면 워크플로가 발송을 부른다. 없으면 발송 단계만 건너뛴다.
+
+   | 이름 | 값 |
+   | --- | --- |
+   | `TNOTI_APP_URL` | 배포 주소 (예: `https://tnoti.vercel.app`) |
+   | `TNOTI_DISPATCH_SECRET` | 환경 변수 `DISPATCH_SECRET`과 같은 값 |
+
+- 수집기가 `data/`만 바꾼 커밋은 다시 배포하지 않는다(`vercel.json`의 `ignoreCommand`). 무료 요금제는 하루 배포 횟수에 제한이 있다.
+- 휴대폰 홈 화면에 추가할 때 쓰는 앱 정보는 `app/manifest.ts`, 아이콘은 `app/icon.png`, `app/apple-icon.png`, `public/icon-*.png`다. 아이폰은 홈 화면에 추가한 뒤에만 푸시를 받는다(iOS 16.4 이상).

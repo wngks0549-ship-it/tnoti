@@ -5,6 +5,8 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "TNoti",
   description: "관심 있는 한국공학대학교 공지만 알림으로 받아요.",
+  // 아이폰 홈 화면에 추가했을 때 주소창 없이 앱처럼 열리게 한다.
+  appleWebApp: { capable: true, title: "TNoti", statusBarStyle: "default" },
 };
 
 export const viewport: Viewport = {
