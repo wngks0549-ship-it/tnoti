@@ -53,3 +53,18 @@ jobs:
           SUPABASE_URL: https://lpbjaraczpohtdwrqbok.supabase.co
           SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_TNOTI_KEY }}
         run: node sync.mjs
+
+      # 새로 들어온 공지를 구독 조건과 맞춰 알림을 보낸다(웹 서버의 /api/dispatch).
+      # 저장소 비밀 값 TNOTI_APP_URL, TNOTI_DISPATCH_SECRET 을 넣기 전에는 건너뛴다.
+      - name: 알림 발송
+        env:
+          APP_URL: ${{ secrets.TNOTI_APP_URL }}
+          DISPATCH_SECRET: ${{ secrets.TNOTI_DISPATCH_SECRET }}
+        run: |
+          if [ -z "$APP_URL" ] || [ -z "$DISPATCH_SECRET" ]; then
+            echo "발송 주소나 비밀 값이 없어서 건너뜀"
+            exit 0
+          fi
+          curl --fail-with-body --silent --show-error --max-time 60 \
+            -X POST "${APP_URL%/}/api/dispatch" \
+            -H "Authorization: Bearer $DISPATCH_SECRET"
