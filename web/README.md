@@ -115,5 +115,4 @@ proxy.ts             요청마다 세션을 갱신하고 로그인이 필요한 
    | `TNOTI_APP_URL` | 배포 주소 (예: `https://tnoti.vercel.app`) |
    | `TNOTI_DISPATCH_SECRET` | 환경 변수 `DISPATCH_SECRET`과 같은 값 |
 
-- 수집기가 `data/`만 바꾼 커밋은 다시 배포하지 않는다(`vercel.json`의 `ignoreCommand`). 무료 요금제는 하루 배포 횟수에 제한이 있다.
 - 휴대폰 홈 화면에 추가할 때 쓰는 앱 정보는 `app/manifest.ts`, 아이콘은 `app/icon.png`, `app/apple-icon.png`, `public/icon-*.png`다. 아이폰은 홈 화면에 추가한 뒤에만 푸시를 받는다(iOS 16.4 이상).
