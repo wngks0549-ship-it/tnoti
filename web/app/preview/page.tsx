@@ -8,7 +8,8 @@ export default async function PreviewIndex() {
 
   const screens = [
     { id: "S1", name: "랜딩", note: "서비스 소개, 카테고리, 최근 공지", href: "/", real: true },
-    { id: "S2", name: "가입·로그인", note: "학교 메일로 로그인 링크 받기", href: "/login", real: true },
+    { id: "S2", name: "가입·로그인", note: "학교 메일로 로그인 메일 받기", href: "/login", real: true },
+    { id: "S2", name: "가입·로그인 (메일 보낸 뒤)", note: "메일의 숫자 입력, 아이폰 홈 화면 안내", href: "/preview/login", real: false },
     { id: "S3", name: "구독 설정", note: "카테고리와 키워드 고르기, 알림 허용", href: "/preview/subscribe", real: false },
     { id: "S4", name: "맞춤 공지 목록", note: "내 구독에 맞는 공지, 거르기, 찾기", href: "/preview/notices", real: false },
     { id: "S5", name: "공지 상세", note: "마감일, 수정 여부, 원문 링크", href: latest ? `/notices/${latest.notice_id}` : "/", real: true },
@@ -29,7 +30,7 @@ export default async function PreviewIndex() {
 
         <ul className="border-t border-line">
           {screens.map((s) => (
-            <li key={s.id} className="border-b border-line">
+            <li key={s.href} className="border-b border-line">
               <Link href={s.href} className="flex gap-3 px-5 py-4 active:bg-ground">
                 <span className="nums w-14 shrink-0 text-title font-bold text-navy">{s.id}</span>
                 <span className="min-w-0 flex-1">

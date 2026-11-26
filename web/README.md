@@ -41,11 +41,17 @@ npm run dev
 ## 로그인이 되려면 (Supabase 대시보드에서 한 번)
 
 1. **Authentication → URL Configuration:** Site URL에 실제 주소를 넣고, Redirect URLs에 `http://localhost:3000/**`와 배포 주소를 더한다.
-2. **Authentication → Email Templates → Magic Link:** 링크를 아래로 바꾼다. 메일을 연 기기가 달라도 로그인된다.
+2. **Authentication → Emails → Magic Link 와 Confirm signup:** 두 문구 모두 본문을 아래로 바꾼다. 숫자(`{{ .Token }}`)는 화면에 입력하는 코드, 링크는 메일을 연 기기에서 바로 들어가는 길이다.
 
    ```html
-   <a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=email">TNoti 로그인</a>
+   <h2>TNoti 로그인</h2>
+   <p>아래 숫자를 TNoti 화면에 입력해 주세요.</p>
+   <p style="font-size:28px;font-weight:700;letter-spacing:4px">{{ .Token }}</p>
+   <p>이 기기에서 바로 들어가려면 <a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=email">여기를 눌러 주세요</a>.</p>
+   <p>15분 동안 쓸 수 있어요. 요청한 적이 없다면 이 메일은 무시해 주세요.</p>
    ```
+
+   숫자가 꼭 있어야 하는 이유: 아이폰의 홈 화면 앱은 사파리와 로그인 상태를 나눠 쓰지 않는다. 메일의 링크는 사파리에서 열리므로 앱은 로그인되지 않는다. 앱 안에서 숫자를 입력해야 그 앱이 로그인된다.
 
 3. **Authentication → Providers → Email:** Email OTP Expiration을 900초(15분)로 맞춘다(FR-02).
 4. Supabase 기본 메일은 조직 팀원 주소로만 간다. 다른 사람도 가입하게 하려면 **Authentication → SMTP Settings**에 메일 발송 계정을 연결한다.
