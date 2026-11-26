@@ -1,5 +1,45 @@
 [
   {
+    "article_id": 155108,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155108/artclView.do",
+    "board_no": 16296,
+    "title": "제2생활관 엘리베이터 정기점검 안내 (11.30 월)",
+    "author_dept": "생활관",
+    "posted_at": "2026-11-26",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-26T15:37:13.700Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155105,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155105/artclView.do",
+    "board_no": 16295,
+    "title": "[JUMP START] 나의 공부 흔적이 특별한 혜택으로! 학습노트 공모전",
+    "author_dept": "교양·전공설계센터",
+    "posted_at": "2026-11-26",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-26T15:37:13.700Z",
+    "modified_at": null
+  },
+  {
     "article_id": 155103,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155103/artclView.do",
     "board_no": 16294,
@@ -193,7 +233,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-24T11:40:03.111Z",
     "modified_at": null
   },
@@ -213,7 +253,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-24T11:40:03.111Z",
     "modified_at": null
   },
