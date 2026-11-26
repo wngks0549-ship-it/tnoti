@@ -58,3 +58,19 @@ export async function savePushSubscription(sub: PushSubscriptionData): Promise<R
 export async function useEmailChannel(): Promise<Result> {
   return setChannel("email");
 }
+
+/** 이 브라우저의 푸시 구독이 내 계정에 살아 있는 구독으로 등록돼 있는지. 본인 것만 읽힌다(RLS). */
+export async function hasPushSubscription(endpoint: string): Promise<boolean> {
+  if (typeof endpoint !== "string" || !endpoint || endpoint.length > 2000) return false;
+  const supabase = await createClient();
+  const { count, error } = await supabase
+    .from("push_subscription")
+    .select("subscription_id", { count: "exact", head: true })
+    .eq("endpoint", endpoint)
+    .is("expired_at", null);
+  if (error) {
+    console.error("푸시 구독 확인 실패:", error.code, error.message);
+    return false;
+  }
+  return (count ?? 0) > 0;
+}
