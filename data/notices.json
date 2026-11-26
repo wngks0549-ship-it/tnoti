@@ -1,5 +1,45 @@
 [
   {
+    "article_id": 155103,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155103/artclView.do",
+    "board_no": 16294,
+    "title": "[D-1]★게임,전자,기계,기설,메카 급구★ 전원 참여선물 증정!!\"교육성과 통합",
+    "author_dept": "IR센터",
+    "posted_at": "2026-11-26",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-26T05:23:20.005Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155084,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155084/artclView.do",
+    "board_no": 16293,
+    "title": "[공모전 연장]2026 첨단산업 인재양성 부트캠프 종합설계 아이디어 공모전",
+    "author_dept": "미래차공학교육혁신센터",
+    "posted_at": "2026-11-26",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-26T05:23:20.005Z",
+    "modified_at": null
+  },
+  {
     "article_id": 155077,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155077/artclView.do",
     "board_no": 16292,
@@ -199,7 +239,7 @@
         }
       ]
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-24T11:40:03.111Z",
     "modified_at": null
   },
@@ -219,7 +259,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-24T11:40:03.111Z",
     "modified_at": null
   },
