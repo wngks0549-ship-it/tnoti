@@ -4,10 +4,10 @@
 // on… 과 signoutPath 를 주면 저장한다(진짜 화면). 안 주면 이 화면 안에서만 바뀐다(시안).
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { textButton } from "@/components/ui";
 import type { Subscription } from "@/lib/match";
-import { enablePush, type PushSubscriptionData } from "@/lib/push-client";
+import { currentPushEndpoint, enablePush, type PushSubscriptionData } from "@/lib/push-client";
 
 type Frequency = "instant" | "twice_daily";
 type Result = { error?: string };
@@ -24,6 +24,8 @@ type Props = {
   onDelete?: () => Promise<Result>;
   /** 이 기기의 푸시 구독을 저장하는 서버 액션. 주면 "알림 허용하기" 버튼이 보인다. */
   onPushSave?: (sub: PushSubscriptionData) => Promise<Result>;
+  /** 이 브라우저의 푸시 구독이 내 계정에 등록돼 있는지 묻는 서버 액션. 받는 방법은 계정에 하나지만 허용은 기기마다 따로다. */
+  onPushCheck?: (endpoint: string) => Promise<boolean>;
   /** 로그아웃을 받는 주소(POST). 없으면 버튼만 보인다. */
   signoutPath?: string;
 };
@@ -52,7 +54,24 @@ export function SettingsForm(props: Props) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // 이 기기에서 알림을 허용했는지. 확인하기 전(checking)에는 단정하지 않는다. 시안에서는 묻지 않는다.
+  const [device, setDevice] = useState<"checking" | "on" | "off">(props.onPushCheck ? "checking" : "on");
+
   const { categories, keywords } = props.subscription;
+  const { onPushCheck } = props;
+
+  useEffect(() => {
+    if (!onPushCheck) return;
+    let cancelled = false;
+    (async () => {
+      const endpoint = await currentPushEndpoint();
+      const registered = endpoint ? await onPushCheck(endpoint) : false;
+      if (!cancelled) setDevice(registered ? "on" : "off");
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [onPushCheck]);
 
   /** 화면을 먼저 바꾸고 저장한다. 저장에 실패하면 되돌리고 이유를 보여준다. */
   async function change<T>(next: T, prev: T, apply: (v: T) => void, save?: (v: T) => Promise<Result>) {
@@ -75,7 +94,10 @@ export function SettingsForm(props: Props) {
     setError(null);
     const outcome = await enablePush(props.onPushSave);
     setBusy(false);
-    if (outcome.status === "push") router.refresh();
+    if (outcome.status === "push") {
+      setDevice("on");
+      router.refresh();
+    }
     else if (outcome.status === "denied")
       setError("이 브라우저에서 알림이 막혀 있어요. 브라우저의 사이트 설정에서 알림을 허용한 뒤 다시 해 주세요.");
     else if (outcome.status === "unsupported")
@@ -158,16 +180,24 @@ export function SettingsForm(props: Props) {
 
       <Section title="받는 방법">
         <p className="text-title font-bold">
-          {props.channel === "push" ? "이 기기의 푸시 알림" : "학교 메일"}
+          {props.channel === "email"
+            ? "학교 메일"
+            : device === "on"
+              ? "이 기기의 푸시 알림"
+              : device === "off"
+                ? "다른 기기의 푸시 알림"
+                : "푸시 알림"}
         </p>
         <p className="mt-0.5 text-meta text-sub">
-          {props.channel === "push"
-            ? "푸시가 가지 않으면 학교 메일로 대신 보내요."
-            : "이 기기에서 알림을 허용하지 않아서 메일로 보내요."}
+          {props.channel === "email"
+            ? "이 기기에서 알림을 허용하지 않아서 메일로 보내요."
+            : device === "off"
+              ? "이 기기에서는 아직 알림을 허용하지 않았어요. 허용해 둔 다른 기기로만 알림이 가요."
+              : "푸시가 가지 않으면 학교 메일로 대신 보내요."}
         </p>
-        {props.channel === "email" && props.onPushSave && (
+        {props.onPushSave && (props.channel === "email" || device === "off") && (
           <button type="button" className={textButton} disabled={busy} onClick={allowPush}>
-            이 기기에서 알림 허용하기
+            {props.channel === "email" ? "이 기기에서 알림 허용하기" : "이 기기에서도 알림 허용하기"}
           </button>
         )}
       </Section>

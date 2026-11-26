@@ -91,3 +91,16 @@ function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
     );
   });
 }
+
+/** 이 브라우저가 이미 만들어 둔 푸시 구독의 주소. 알림을 허용하지 않았거나 구독이 없으면 null. */
+export async function currentPushEndpoint(): Promise<string | null> {
+  if (!("serviceWorker" in navigator) || !("PushManager" in window) || !("Notification" in window)) return null;
+  if (Notification.permission !== "granted") return null;
+  try {
+    const registration = await navigator.serviceWorker.getRegistration("/");
+    const subscription = await registration?.pushManager.getSubscription();
+    return subscription?.endpoint ?? null;
+  } catch {
+    return null;
+  }
+}
