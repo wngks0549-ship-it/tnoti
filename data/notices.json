@@ -1,5 +1,51 @@
 [
   {
+    "article_id": 155133,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155133/artclView.do",
+    "board_no": 16298,
+    "title": "2026학년도 동계방학(계절학기) 사회봉사교과목 수강신청 안내(이수자 장학금 50만원 지급",
+    "author_dept": "사회봉사지원센터",
+    "posted_at": "2026-11-27",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "장학"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "장학",
+          "field": "title",
+          "keyword": "장학"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-27T08:08:02.450Z",
+    "modified_at": null
+  },
+  {
+    "article_id": 155116,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155116/artclView.do",
+    "board_no": 16297,
+    "title": "[대학공유협력센터] 2026 지역사회참여(CE 교과) 수강후기 공모전 접수 안내(~12.1",
+    "author_dept": "대학공유협력센",
+    "posted_at": "2026-11-27",
+    "deadline": "2026-12-01",
+    "status": "active",
+    "categories": [
+      "기타"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": []
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-27T08:08:02.450Z",
+    "modified_at": null
+  },
+  {
     "article_id": 155108,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155108/artclView.do",
     "board_no": 16296,
@@ -187,7 +233,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-25T04:34:26.603Z",
     "modified_at": null
   },
@@ -213,7 +259,7 @@
         }
       ]
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-24T11:40:03.111Z",
     "modified_at": null
   },
