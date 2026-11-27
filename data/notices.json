@@ -1,5 +1,31 @@
 [
   {
+    "article_id": 155146,
+    "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155146/artclView.do",
+    "board_no": 16299,
+    "title": "🐿️ 잃어버린 군자의 마음을 찾아라! 마을 축제 안내(12/05(토))",
+    "author_dept": "창업교육센터",
+    "posted_at": "2026-11-27",
+    "deadline": null,
+    "status": "active",
+    "categories": [
+      "창업"
+    ],
+    "classification": {
+      "method": "rule",
+      "matched_rules": [
+        {
+          "category": "창업",
+          "field": "author_dept",
+          "keyword": "창업"
+        }
+      ]
+    },
+    "on_first_page": true,
+    "collected_at": "2026-11-27T18:10:33.511Z",
+    "modified_at": null
+  },
+  {
     "article_id": 155133,
     "source_url": "https://tukorea.ac.kr/bbs/tukorea/1303/155133/artclView.do",
     "board_no": 16298,
@@ -213,7 +239,7 @@
       "method": "rule",
       "matched_rules": []
     },
-    "on_first_page": true,
+    "on_first_page": false,
     "collected_at": "2026-11-25T04:34:26.603Z",
     "modified_at": null
   },
